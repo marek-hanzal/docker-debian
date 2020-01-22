@@ -6,7 +6,7 @@ ENV \
 RUN \
     apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests \
-        ca-certificates curl git xz-utils zip unzip bzip2 re2c supervisor
+        ca-certificates curl git vim xz-utils zip unzip bzip2 re2c supervisor
 
 RUN mkdir -p /etc/supervisor/conf.d
 
