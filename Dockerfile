@@ -12,4 +12,4 @@ RUN mkdir -p /etc/supervisor/conf.d
 
 ADD rootfs /
 
-CMD ["supervisord", "-c", "/etc/supervisord.conf"]
+CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
