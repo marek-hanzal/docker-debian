@@ -13,6 +13,12 @@ RUN \
         libc-client-dev libkrb5-dev libsasl2-dev libsodium-dev libargon2-dev libxslt-dev imagemagick libmagickcore-dev \
         libde265-dev libheif-dev wget
 
+RUN \
+    curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends --no-install-suggests \
+      nodejs
+
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 RUN chsh -s $(which zsh)
 WORKDIR /root/.oh-my-zsh/custom/plugins
