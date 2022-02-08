@@ -11,7 +11,7 @@ RUN \
         libxml2-dev libssl-dev libsqlite3-dev zlib1g-dev libbz2-dev libcurl4-openssl-dev libonig-dev \
         libpq-dev libreadline-dev libzip-dev libgmp-dev libldap2-dev libpng-dev libwebp-dev libjpeg-dev libxpm-dev \
         libc-client-dev libkrb5-dev libsasl2-dev libsodium-dev libargon2-dev libxslt-dev imagemagick libmagickcore-dev \
-        libde265-dev libheif-dev wget
+        libde265-dev libheif-dev wget libmemcached-dev
 
 RUN \
     curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
