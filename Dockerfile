@@ -14,7 +14,7 @@ RUN \
         libde265-dev libheif-dev wget libmemcached-dev
 
 RUN \
-    curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
+    curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests \
       nodejs
