@@ -19,13 +19,6 @@ RUN \
     apt-get install -y --no-install-recommends --no-install-suggests \
       nodejs
 
-RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-RUN chsh -s $(which zsh)
-WORKDIR /root/.oh-my-zsh/custom/plugins
-RUN \
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting && \
-    git clone https://github.com/zsh-users/zsh-autosuggestions
-
 RUN wget https://www.imagemagick.org/download/ImageMagick.tar.gz
 RUN tar xf ImageMagick.tar.gz
 RUN \
