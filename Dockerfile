@@ -17,7 +17,12 @@ RUN \
     curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests \
-      nodejs
+        nodejs
+
+RUN \
+    npm install -g npm && \
+    npm install --global yarn && \
+    curl -fsSL https://get.pnpm.io/install.sh | bash -
 
 RUN wget https://www.imagemagick.org/download/ImageMagick.tar.gz
 RUN tar xf ImageMagick.tar.gz
