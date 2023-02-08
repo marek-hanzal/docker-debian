@@ -19,11 +19,6 @@ RUN \
     apt-get install -y --no-install-recommends --no-install-suggests \
         nodejs
 
-RUN \
-    npm install -g npm && \
-    npm install --global yarn && \
-    curl -fsSL https://get.pnpm.io/install.sh | bash -
-
 RUN wget https://www.imagemagick.org/download/ImageMagick.tar.gz
 RUN tar xf ImageMagick.tar.gz
 RUN \
@@ -32,6 +27,11 @@ RUN \
   make && \
   make install && \
   ldconfig
+
+RUN \
+    npm install -g npm && \
+    npm install -g pnpm && \
+    npm install -g yarn
 
 RUN mkdir -p /etc/supervisor/conf.d
 
